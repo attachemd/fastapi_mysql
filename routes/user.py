@@ -9,6 +9,11 @@ user = APIRouter()
 
 @user.get('/')
 async def read_data():
+    return {'msg': 'hello world'}
+
+
+@user.get('/')
+async def read_data():
     return conn.execute(users.select()).fetchall()
 
 
